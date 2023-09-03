@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexBox</title>
+    <style>
+        *{
+            box-sizing: border-box;/*al usar esta propiedad respeta la medida original de la caja, sin esta se desbordalas cajas duera del margen principal */
+        }
+
+
+        .contenedor {
+            display: flex;/*lo presenta en forma de filas*/
+            flex-direction: column;/*Con esta propiedadel el eje principal es vertical, agregando "-reverse" mantiene la misma posicion pero el orden del contenido de la caja cambia*/
+          /*flex-direction: row;    Con esta propiedadel el eje principal eshorisontal*/ 
+            flex-wrap: wrap; /*Cuando el ancho de los items excede WRAP los dezplaza abajo*/
+            width: 800px;/*le da un ancho a la caja padre*/
+            height: 800px;/*le da un altura a la caja padre*/
+            border: 1px solid;/*Le da borde a la caja padre*/
+            
+ /*         justify-content: space-between; ---> alioneaciom horisontal...."#__#__#"  
+            justify-content: space-around; ---> alioneaciom horisontal.... "_#__#__#_"  
+            justify-content: space-evenly; ---> alioneaciom horisontal.... "__#_#_#__"
+            
+            justify-content: start;/*alioneaciom horisontal...."start"izq, "center" centra , "end" derecha.  */
+            align-items: end;/*alioneaciom vertical...."start"izq, "center" centra , "end" derecha.  */
+                }
+        .contenedor div{
+            height: 200px; /*altura*/
+            width: 200px;  /*ancho*/
+            border: 1px solid;  /*linea borde*/
+            background-color: aqua;/*color interno*/
+            
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="contenedor">
+        <div>One</div>
+        <div>Two</div>
+      <!--<div>Thres</div>
+        <div>four</div>
+        <div>five</div>
+        <div>five</div>
+        <div>four</div>
+        <div>five</div>
+        <div>five</div>-->
+      </div>
+</body>
+</html>

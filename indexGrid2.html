@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexGrid2</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }        
+        
+        .contenedor{
+            display: grid;/*grid*/
+            grid-template-columns: 1fr 1fr 1fr;/*mi contenedor tiene 3 columnas*/
+            grid-gap: 10px;/*defino el espacio de separacion de cada celda*/
+            height: 100vh;   /*Manejo el alto de las celdas*/
+            /*width: 50vh;   /*manejo el ancho de las celdas*/
+        }
+
+        .navbar{
+            grid-column: 1/4;/*abarco la 1ra , 2da y 3ra celdas columnas inicializadas*/
+            grid-row: 1;/*abarco la celda fila  1 inicializada*/
+            background-color: blueviolet;/*color interior de la celda*/
+
+        }
+    
+        .main-content{
+            grid-column: 1/3;/*abarco la 1ra y 2da  celdas columnas inicializadas*/
+            grid-row: 2;/*abarco la celda fila  2 inicializada*/
+            background-color: cornflowerblue;/*color interior de la celda*/
+            display: flex;
+            flex-direction: column;/*Encolumno la imagenes con el titulo y parrafo y footer*/
+            gap: 10px;/*le doy margen de distancia a las imagnes*/
+            justify-content: space-evenly;/*emparejo las 3 imagenes*/
+        }
+
+        .aside{
+            grid-column: 3/4;/*abarco la 3ra celdas columnas inicializadas*/
+            grid-row: 2;/*abarco la celda fila  2 inicializada*/
+            background-color: rgb(76, 230, 38);/*color interior de la celda*/
+        }
+
+        .footer{
+            grid-column: 1/4;/*abarco la 3ra celdas columnas inicializadas*/
+            grid-row: 3;/*abarco la celda fila  2 inicializada*/
+            background-color: rgb(142, 185, 23);/*color interior de la celda*/
+        }
+        .seccion{
+            display: flex;
+            gap: 10px
+        }
+
+        .textos{
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <div class="contenedor">
+        <nav class="navbar">
+            NavBar
+            
+        </nav>
+        <main class="main-content"><!---->
+            <section class="seccion"><!--creo la seccion 1-->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO0k2-oveBDvYvDq-JN4120un07yNY8GZayQ&usqp=CAU" alt="CS GO" height="150   0" width="200">
+                <div class ="textos"><!---->
+                    <h3>imagen mas votada en</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam!</p>
+                    <footer>
+                        <i>actualizado el 22/08/2023</i>
+                    </footer>
+                </div>
+            </section>
+            <section class="seccion"><!--creo la seccion 2-->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO0k2-oveBDvYvDq-JN4120un07yNY8GZayQ&usqp=CAU" alt="CS GO" height="150   0" width="200">
+                <div class ="textos">
+                    <h3>imagen mas votada en</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam!</p>
+                    <footer>
+                        <i>actualizado el 22/08/2023</i>
+                    </footer>
+                </div>
+            </section>
+            <section class="seccion"><!--creo la seccion 3-->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO0k2-oveBDvYvDq-JN4120un07yNY8GZayQ&usqp=CAU" alt="CS GO" height="150   0" width="200">
+                <div class ="textos">
+                    <h3>imagen mas votada en</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam!</p>
+                    <footer>
+                        <i>actualizado el 22/08/2023</i>
+                    </footer>
+                </div>
+
+            </section>
+        </main>
+        <aside class="aside">
+            Barra Lateral
+        </aside>
+        <footer class="footer">
+            Footer
+        </footer>
+
+    </div>    
+</body>
+</html>
